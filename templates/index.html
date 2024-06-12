@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Example Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Heading Section -->
+        <header class="text-center mb-5">
+            <h1 class="display-4">Welcome the online World</h1>
+            <p class="lead"></p>
+        </header>
+
+        <!-- Content Section -->
+        <!-- <section>
+            <h2 class="mt-4">Content Heading</h2>
+            <p>This is a paragraph providing some information under the content heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, urna a efficitur interdum, eros dui fringilla lacus, in luctus mi est at magna.</p>
+
+            <h3 class="mt-4">Subheading 1</h3>
+            <p>Here is some more detailed information under the first subheading. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tortor id mauris malesuada aliquam.</p>
+
+            <h3 class="mt-4">Subheading 2</h3>
+            <p>Additional details are provided under the second subheading. Suspendisse potenti. Donec gravida risus in orci luctus, nec auctor felis elementum.</p>
+        </section> -->
+
+        <!-- Table Section -->
+        <section>
+            <h2 class="mt-4">Example Table</h2>
+            <p>The following table demonstrates the use of tables with enhanced Bootstrap styling:</p>
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+            
+
+                <tbody>
+                    {% for d in data %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{d.name}}</td>
+                        <td>{{d.lastname}}</td>
+                        <td>{{d.age}}</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{d.name}}</td>
+                        <td>{{d.lastname}}</td>
+                        <td>{{d.age}}</td>
+                   </tr>
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{d.name}}</td>
+                        <td>{{d.lastname}}</td>
+                        <td>{{d.age}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{d.name}}</td>
+                        <td>{{d.lastname}}</td>
+                        <td>{{d.age}}</td>
+                    </tr>
+                     -->
+                   
+                </tbody>
+                {% endfor %}
+            </table>
+        </section>
+    </div>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
