@@ -29,27 +29,26 @@ def recipe(request):
     return render(request, 'recipe.html')
  
 
-def login_page (request):
+def login_page(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
         
         user = User.objects.filter(username=username)
         if not user.exists():
-            messages.info(request,"Invalid UserName")
+            messages.info(request, "Invalid UserName")
             return redirect('/form/register')
-        user = authenticate(username=username,password=password)
-
+        
+        user = authenticate(username=username, password=password)
         if user is None:
-            messages.error(request,"Invalid Password")
-
+            messages.error(request, "Invalid Password")
             return redirect("form/login")
-    
         else:
-            login(request,user)
-        return redirect("form/recipe")
+            login(request, user)
+            return redirect("form/recipe")
     
-    return render(request,'login.html')
+    return render(request, 'login.html')
+
 
 def logout_page(request):
     logout(request)
