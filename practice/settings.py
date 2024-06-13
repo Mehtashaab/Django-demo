@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crud',
     'recipesapp',
+    'orm_app',
 ]
 
 MIDDLEWARE = [
